@@ -8,7 +8,16 @@ class HomeOfPhone
   }
 
   def initialize(preload_phonemes: true)
+    @phonemes_loaded = false
     load_phonemes if preload_phonemes
+  end
+
+  def to_s
+    "#<HomeOfPhone phomes_loaded=#{@phonemes_loaded}>"
+  end
+
+  def inspect
+    to_s
   end
 
   def load_phonemes
@@ -39,7 +48,9 @@ class HomeOfPhone
   def phonemes
     @phonemes ||= begin
       require_relative "phonemes"
-      HomeOfPhone::Phonemes.cmu_dict
+      cmu_dict = HomeOfPhone::Phonemes.cmu_dict
+      @phonemes_loaded = true
+      cmu_dict
     end
   end
 
