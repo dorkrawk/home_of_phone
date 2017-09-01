@@ -1,1 +1,3 @@
-HomeOfPhone::VERSION = "0.1.0"
+module HomeOfPhone
+  VERSION = "0.1.0"
+end
