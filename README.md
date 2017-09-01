@@ -1,4 +1,7 @@
 # Home Of Phone
+[![Gem Version](https://badge.fury.io/rb/home_of_phone.svg)](http://badge.fury.io/rb/home_of_phone)
+
+[gem]: https://rubygems.org/gems/home_of_phone
 
 Test how similar two words sound to each other.
 
